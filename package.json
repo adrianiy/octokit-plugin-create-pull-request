@@ -1,6 +1,6 @@
 {
   "name": "@adrian.insua/octokit-plugin-create-pull-request",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Octokit plugin to create a pull request with multiple file changes",
   "scripts": {
     "build": "pika build",
@@ -37,7 +37,10 @@
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
   },
-  "repository": "github:gr2m/octokit-plugin-create-pull-request",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianiy/octokit-plugin-create-pull-request.git"
+  },
   "jest": {
     "preset": "ts-jest",
     "coverageThreshold": {
