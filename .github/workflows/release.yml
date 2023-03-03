@@ -1,6 +1,6 @@
 name: Release
 "on":
-  workflow_dipatch:
+  workflow_dispatch:
   push:
     branches:
       - main
