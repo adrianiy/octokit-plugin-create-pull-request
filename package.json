@@ -2,6 +2,9 @@
   "name": "@adrian.insua/octokit-plugin-create-pull-request",
   "version": "1.0.0",
   "description": "Octokit plugin to create a pull request with multiple file changes",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "pika build",
     "lint": "prettier --check \"{src,test}/**/*.{ts,md}\" *.md package.json tsconfig.json",
