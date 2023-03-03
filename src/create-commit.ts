@@ -1,4 +1,4 @@
-import type { Committer, Changes, State } from "./types";
+import type { Changes, State } from "./types";
 
 export async function createCommit(
   state: Required<State>,
