@@ -1,5 +1,5 @@
 {
-  "name": "octokit-plugin-create-pull-request",
+  "name": "@adrian.insua/octokit-plugin-create-pull-request",
   "version": "0.0.0-development",
   "description": "Octokit plugin to create a pull request with multiple file changes",
   "scripts": {
@@ -7,6 +7,7 @@
     "lint": "prettier --check \"{src,test}/**/*.{ts,md}\" *.md package.json tsconfig.json",
     "lint:fix": "prettier --write \"{src,test}/**/*.{ts,md}\" *.md package.json tsconfig.json",
     "pretest": "npm run -s lint",
+    "semantic-release": "semantic-release",
     "test": "jest --coverage"
   },
   "keywords": [
