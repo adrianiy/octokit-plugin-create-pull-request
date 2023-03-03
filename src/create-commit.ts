@@ -24,6 +24,7 @@ export async function createCommit(
       committer: changes.committer,
       tree: state.latestCommitTreeSha,
       parents: [latestCommitSha],
+      signature: changes.signature,
     }
   );
 

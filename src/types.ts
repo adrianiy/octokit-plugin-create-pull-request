@@ -26,6 +26,7 @@ export type Changes = {
   commit: string;
   committer?: Committer;
   author?: Author | undefined;
+  signature?: string;
 };
 
 // https://developer.github.com/v3/git/blobs/#parameters
