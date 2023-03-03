@@ -13,18 +13,22 @@ export async function createCommit(
     ? changes.emptyCommit
     : changes.commit;
 
+    const commit = {
+      message,
+      author: changes.author,
+      committer: changes.committer,
+      tree: state.latestCommitTreeSha,
+      parents: [latestCommitSha],
+    }
+
   // https://developer.github.com/v3/git/commits/#create-a-commit
   const { data: latestCommit } = await octokit.request(
     "POST /repos/{owner}/{repo}/git/commits",
     {
       owner: ownerOrFork,
       repo,
-      message,
-      author: changes.author,
-      committer: changes.committer,
-      tree: state.latestCommitTreeSha,
-      parents: [latestCommitSha],
-      signature: changes.signature,
+      ...commit,
+      signature: changes.signature?.(commit),
     }
   );
 

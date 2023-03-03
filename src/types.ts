@@ -17,7 +17,13 @@ export type Options = {
   forceFork?: boolean;
   update?: boolean;
 };
-
+export type Commit = {
+  message: string;
+  tree: string;
+  parents: string[];
+  author?: Author;
+  committer?: Committer;
+};
 export type Changes = {
   files?: {
     [path: string]: string | File | UpdateFunction | null;
@@ -26,7 +32,7 @@ export type Changes = {
   commit: string;
   committer?: Committer;
   author?: Author | undefined;
-  signature?: string;
+  signature?: (commit: Commit) => string | null;
 };
 
 // https://developer.github.com/v3/git/blobs/#parameters
