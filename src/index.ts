@@ -23,4 +23,5 @@ export namespace createPullRequest {
   export type File = Types.File;
   export type UpdateFunctionFile = Types.UpdateFunctionFile;
   export type UpdateFunction = Types.UpdateFunction;
+  export type Commit = Types.Commit;
 }
